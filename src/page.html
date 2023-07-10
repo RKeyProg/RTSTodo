@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicoin.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <title>RTS test</title>
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <form class="input__section" id="addTaskForm">
+          <input
+            type="text"
+            class="app__element app__input element_shadow_inset"
+            placeholder="Add new task"
+            id="inputTask"
+          />
+          <button class="input__arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <path
+                d="M8.75 5L17.2896 12.6875C17.356 12.7436 17.409 12.8114 17.4451 12.8866C17.4813 12.9619 17.5 13.043 17.5 13.125C17.5 13.207 17.4813 13.2881 17.4451 13.3634C17.409 13.4386 17.356 13.5064 17.2896 13.5625L8.75 21.25"
+                stroke="#94ADCF"
+                stroke-width="3.42857"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </form>
+        <h2 class="header__title">My Tasks</h2>
+        <button class="header__hamburger" id="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="29"
+            viewBox="0 0 40 29"
+          >
+            <rect x="12" width="28" height="5" rx="2.5" fill="#94ADCF" />
+            <rect y="12" width="40" height="5" rx="2.5" fill="#94ADCF" />
+            <rect x="17" y="24" width="23" height="5" rx="2.5" fill="#94ADCF" />
+          </svg>
+        </button>
+      </header>
+      <div class="tasks__section">
+        <div class="tasks__list" id="uncomplitedTasks">
+          <button class="task task_uncomplited app__element element_shadow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+            >
+              <circle
+                cx="9"
+                cy="9"
+                r="7.75"
+                stroke="#94ADCF"
+                stroke-width="2.5"
+              />
+            </svg>
+            <span>Go shopping</span>
+          </button>
+          <button class="task task_uncomplited app__element element_shadow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+            >
+              <circle
+                cx="9"
+                cy="9"
+                r="7.75"
+                stroke="#94ADCF"
+                stroke-width="2.5"
+              />
+            </svg>
+            <span>Short exercise </span>
+          </button>
+          <button class="task task_uncomplited app__element element_shadow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+            >
+              <circle
+                cx="9"
+                cy="9"
+                r="7.75"
+                stroke="#94ADCF"
+                stroke-width="2.5"
+              />
+            </svg>
+            <span>Meditation </span>
+          </button>
+        </div>
+      </div>
+      <div class="tasks__section">
+        <h3 class="tasks__title">Completed</h3>
+        <div class="tasks__list" id="complitedTasks">
+          <button class="task task_complited app__element element_shadow_inset">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+            >
+              <circle
+                cx="9"
+                cy="9"
+                r="7.75"
+                stroke="#94ADCF"
+                stroke-width="2.5"
+              />
+            </svg>
+            <span>Go shopping</span>
+          </button>
+        </div>
+      </div>
+      <button class="add__btn element_shadow" id="addBtn"></button>
+    </div>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

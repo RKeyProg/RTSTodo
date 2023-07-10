@@ -1,0 +1,349 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Ubuntu:wght@400;500&display=swap");
+
+:root {
+  font-family: Ubuntu, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #7f7f7f;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: $bg-color;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 4.625rem 0 10rem;
+}
+
+.container {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: $text-color;
+
+  @include tablets {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: $text-color;
+
+  @include tablets {
+    font-size: 1.5rem;
+  }
+
+  @include phones {
+    font-size: 1.125rem;
+  }
+}
+
+input,
+button {
+  outline: none;
+  border: 0;
+}
+
+button {
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+svg * {
+  transition: all 0.3s ease;
+}
+
+.app__link {
+  text-transform: uppercase;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+}
+
+.app__title {
+  font-family: Inter;
+  color: $text-color;
+  margin-bottom: 1rem;
+}
+
+.app__subtitle {
+  font-family: Inter;
+  font-size: 1.5rem;
+  color: $text-color;
+}
+
+.element_shadow_inset {
+  box-shadow: 3px 3px 8px 0px rgba(46, 53, 62, 0.9) inset,
+    -3px -3px 6px 0px rgba(66, 75, 88, 0.9) inset,
+    3px -3px 6px 0px rgba(46, 53, 62, 0.2) inset,
+    -3px 3px 6px 0px rgba(46, 53, 62, 0.2) inset,
+    -1px -1px 2px 0px rgba(46, 53, 62, 0.5),
+    1px 1px 2px 0px rgba(66, 75, 88, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 3px 3px 8px 0px rgba(46, 53, 62, 0.9) inset,
+      -3px -3px 6px 0px rgba(66, 75, 88, 0.9) inset,
+      3px -3px 6px 0px rgba(77, 87, 100, 0.2) inset,
+      -3px 3px 6px 0px rgba(77, 87, 100, 0.2) inset,
+      -1px -1px 2px 0px rgba(46, 53, 62, 0.5),
+      1px 1px 2px 0px rgba(66, 75, 88, 0.3);
+  }
+}
+
+.element_shadow {
+  box-shadow: -1px -1px 2px 0px rgba(48, 54, 64, 0.5) inset,
+    1px 1px 2px 0px rgba(64, 74, 86, 0.3) inset;
+  filter: drop-shadow(5px 5px 5px rgba(48, 54, 64, 0.9))
+    drop-shadow(-5px -5px 2px rgba(64, 74, 86, 0.9))
+    drop-shadow(5px -5px 2px rgba(48, 54, 64, 0.2))
+    drop-shadow(-5px 5px 2px rgba(48, 54, 64, 0.2));
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: -1px -1px 2px 0px rgba(48, 54, 64, 0.5) inset,
+      1px 1px 2px 0px rgba(64, 74, 86, 0.3) inset;
+    filter: drop-shadow(5px 5px 5px rgba(48, 54, 64, 0.9))
+      drop-shadow(-5px -5px 2px rgba(64, 74, 86, 0.9))
+      drop-shadow(5px -5px 2px rgba(76, 85, 99, 0.2))
+      drop-shadow(-5px 5px 2px rgba(76, 85, 99, 0.2));
+  }
+}
+
+.app__element {
+  background: $bg-color;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  color: $text-color;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6.3rem;
+
+  &__hamburger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    &:hover {
+      & * {
+        fill: $text-color-hover;
+      }
+    }
+  }
+
+  @include tablets {
+    justify-content: flex-start;
+  }
+}
+
+.input__section {
+  position: relative;
+  width: clamp(20rem, 45vw, 36.125rem);
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__title {
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.app__input {
+  width: 100%;
+  padding-left: 2.375rem;
+
+  &:focus {
+    box-shadow: 3px 3px 8px 0px rgba(46, 53, 62, 0.9) inset,
+      -3px -3px 6px 0px rgba(66, 75, 88, 0.9) inset,
+      3px -3px 6px 0px rgba(77, 87, 100, 0.2) inset,
+      -3px 3px 6px 0px rgba(77, 87, 100, 0.2) inset,
+      -1px -1px 2px 0px rgba(80, 90, 103, 0.5),
+      1px 1px 2px 0px rgba(80, 90, 103, 0.5);
+  }
+
+  &::placeholder {
+    color: $text-color;
+  }
+}
+
+.input__arrow {
+  top: 50%;
+  right: 0.625rem;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.tasks__section {
+  width: 100%;
+}
+
+.tasks__list {
+  width: 100%;
+  display: grid;
+  grid-row-gap: 3.25rem;
+  grid-column-gap: 10%;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, auto));
+
+  @include laptop {
+    grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
+  }
+
+  @include tablets {
+    grid-row-gap: 1.9rem;
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+}
+
+.task {
+  max-width: calc(45vw - 5%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 18rem;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.125rem;
+
+  @include desktop {
+    max-width: calc(1280px / 2);
+  }
+
+  @include tablets {
+    padding: 0.75rem 1rem;
+    max-width: 100%;
+  }
+
+  & svg {
+    margin-right: 1.68rem;
+
+    @include tablets {
+      margin-right: 0.75rem;
+    }
+  }
+
+  &_complited {
+    text-decoration: line-through;
+
+    & svg {
+      fill: $text-color;
+    }
+  }
+}
+
+.tasks__title {
+  justify-self: flex-start;
+  margin: 3.25rem 0;
+
+  @include tablets {
+    margin: 3rem 0 2rem;
+  }
+}
+
+%btn__cross-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.5rem;
+  height: 0.15rem;
+  background: $text-color;
+}
+
+.add__btn {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    @extend %btn__cross-position;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    content: "";
+    @extend %btn__cross-position;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  @include tablets {
+    display: block;
+  }
+}
